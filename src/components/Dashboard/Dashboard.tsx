@@ -10,7 +10,7 @@ type DashboardProps = {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Dashboard = ({ movieData, setStep, setSelectedMovie }: DashboardProps) => {
   return (
-    <div className="grid grid-cols-4 gap-8 h-full text-center px-8 py-8">
+    <div className="grid md:grid-cols-4 grid-cols-2 gap-8 h-full text-center px-8 py-8">
       {movieData
         .filter((data) => data.streamingInfo)
         .map((movie) => (

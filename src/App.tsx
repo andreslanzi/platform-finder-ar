@@ -10,7 +10,7 @@ function App() {
   const [step, setStep] = useState(0);
 
   return (
-    <div className="p-16 bg-primary">
+    <div className="p-8 bg-primary">
       <h1 className="text-white-100 text-xl">Buscador De Películas Y Series</h1>
       <h2 className="text-gray-400">by Andres Lanzi</h2>
       <div className="py-8">
