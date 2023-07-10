@@ -35,7 +35,7 @@ const MovieDetails = ({ movie }: { movie: Movie | undefined }) => {
         <div className="md:w-[400px] w-[300px] flex justify-center align-center items-center rounded">
           <img src={movie.posterURLs.original} className="m-auto flex justify-center md:mr-8" />
         </div>
-        <div className="md:w-[55%] w-full md:px-8 flex flex-col justify-around text-center md:border-2 md:rounded-xl md:border-slate-600 bg-shadow-2xl">
+        <div className="md:w-[55%] w-full md:px-8 md:py-4 flex flex-col justify-around text-center md:border-2 md:rounded-xl md:border-slate-600 bg-shadow-2xl">
           <div>
             <span className="lg:text-4xl text-xl font-sans text-slate-400">
               {movie.title.toUpperCase()}
