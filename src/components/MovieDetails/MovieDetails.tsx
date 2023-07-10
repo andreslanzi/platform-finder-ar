@@ -32,7 +32,7 @@ const MovieDetails = ({ movie }: { movie: Movie | undefined }) => {
   return movie ? (
     <>
       <div className="flex flex-inline w-full md:flex-row flex-col text-center items-center justify-center m-auto md:py-8 md:px-12 py-4 px-4 text-white">
-        <div className="md:w-[500px] w-[300px] flex justify-center align-center items-center rounded">
+        <div className="md:w-[400px] w-[300px] flex justify-center align-center items-center rounded">
           <img src={movie.posterURLs.original} className="m-auto flex justify-center md:mr-8" />
         </div>
         <div className="md:w-[55%] w-full md:px-8 flex flex-col justify-around text-center md:border-2 md:rounded-xl md:border-slate-600 bg-shadow-2xl">

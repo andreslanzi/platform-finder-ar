@@ -17,8 +17,7 @@ const Form = ({ setMovieData, setStep }: FormProps) => {
     setMovieTitle(e.currentTarget.value);
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setIsLoading(true);
     const movies = await fetchMovieData(movieTitle);
     if (movies.result.length > 0) {
@@ -27,6 +26,12 @@ const Form = ({ setMovieData, setStep }: FormProps) => {
     } else {
       setIsLoading(false);
       setError('No movies found 🥺 \n Maybe try another title?');
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      handleSubmit();
     }
   };
 
@@ -42,6 +47,7 @@ const Form = ({ setMovieData, setStep }: FormProps) => {
         onChange={handleMovieTitle}
         disabled={isLoading}
         placeholder="Ingresá el título que buscabas!"
+        onKeyDown={handleKeyDown}
       />
       {!isLoading && (
         <button
