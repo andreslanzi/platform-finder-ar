@@ -49,4 +49,12 @@ export type Movie = {
   }[];
 };
 
-export type Platform = 'apple' | 'netflix' | 'hbo' | 'disney' | 'paramount' | 'zee5' | 'prime';
+export type Platform =
+  | 'apple'
+  | 'netflix'
+  | 'hbo'
+  | 'disney'
+  | 'paramount'
+  | 'zee5'
+  | 'prime'
+  | 'mubi';

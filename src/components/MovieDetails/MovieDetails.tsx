@@ -6,6 +6,7 @@ import hbo from '../../assets/platform-logos/hbo.png';
 import paramount from '../../assets/platform-logos/paramount.png';
 import zee5 from '../../assets/platform-logos/zee5.png';
 import prime from '../../assets/platform-logos/prime.png';
+import mubi from '../../assets/platform-logos/mubi.png';
 
 const MovieDetails = ({ movie }: { movie: Movie | undefined }) => {
   const getLogo = (platform: Platform) => {
@@ -24,10 +25,14 @@ const MovieDetails = ({ movie }: { movie: Movie | undefined }) => {
         return zee5;
       case 'prime':
         return prime;
+      case 'mubi':
+        return mubi;
       default:
         return netflix;
     }
   };
+
+  console.log(movie);
 
   return movie ? (
     <>
