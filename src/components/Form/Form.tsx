@@ -20,7 +20,10 @@ const Form = ({ setMovieData, setStep }: FormProps) => {
   const handleSubmit = async () => {
     setIsLoading(true);
     const movies = await fetchMovieData(movieTitle);
-    if (movies.result.length > 0) {
+    if (
+      movies.result.length > 0 &&
+      movies.result.filter((r: Movie) => r.streamingInfo.ar).length > 0
+    ) {
       setMovieData(movies.result.filter((r: Movie) => r.streamingInfo.ar));
       setStep(1);
     } else {
